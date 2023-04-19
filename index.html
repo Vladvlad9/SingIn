@@ -24,5 +24,24 @@
     </form>
 </div>
 
+    <script>
+        let tg = window.Telegram.WebApp
+        tg.expand()
+
+        order.addEventListener("click", () => {
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+        })
+
+        let data = {
+            email: email,
+            password: password
+        }
+
+        tg.sendData(JSON.stringify(data))
+
+        tg.close()
+    </script>
+
 </body>
 </html>
