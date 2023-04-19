@@ -19,18 +19,19 @@
         </div>
 
         <div class="form-group">
-            <button class="btn btn-primary btn-block create-account" type="submit">Вход в аккаунт</button>
+            <button class="btn btn-primary btn-block create-account" id="order" type="submit">Вход в аккаунт</button>
         </div>
     </form>
 </div>
 
     <script>
-        let tg = window.Telegram.WebApp
-        tg.expand()
+        let order = document.getElementById("order");
+        let tg = window.Telegram.WebApp;
+        tg.expand();
 
         order.addEventListener("click", () => {
-            let email = document.getElementById("email").value
-            let password = document.getElementById("password").value
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
         })
 
         let data = {
@@ -38,9 +39,9 @@
             password: password
         }
 
-        tg.sendData(JSON.stringify(data))
+        tg.sendData(JSON.stringify(data));
 
-        tg.close()
+        tg.close();
     </script>
 
 </body>
