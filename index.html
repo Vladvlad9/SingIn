@@ -32,16 +32,19 @@
         order.addEventListener("click", () => {
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
-        })
 
-        let data = {
+            let data = {
             email: email,
             password: password
         }
 
-        tg.sendData(JSON.stringify(data));
+            tg.sendData(JSON.stringify(data));
+            tg.close();
+        })
 
-        tg.close();
+
+
+
     </script>
 
 
